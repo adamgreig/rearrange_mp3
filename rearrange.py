@@ -10,7 +10,7 @@ import string
 import re
 from mutagen.easyid3 import EasyID3
 
-regex = re.compile("\W")
+regex = re.compile("\W", re.UNICODE)
 
 if len(sys.argv) != 3:
     print "Usage:"
