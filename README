@@ -1,0 +1,12 @@
+# Rearrange a collection of MP3s based on ID3 tag data
+
+$ rearrange.py source dest
+Scans source for files ending ".mp3" (case insensitive), attempts to read ID3
+tag data from each MP3 found and if successful copies that MP3 to a new
+directory in dest based on ID3 data: dest/artist/album/num_title.mp3.
+
+In addition, most non-alphanumeric characters are replaced with underscore.
+
+
+Adam Greig
+2011
