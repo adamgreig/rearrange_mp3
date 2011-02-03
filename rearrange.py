@@ -48,4 +48,11 @@ for root, dirs, files in os.walk(source):
                 title = regex.sub("_", title)
                 album = regex.sub("_", album)
                 artist = regex.sub("_", artist)
-                print num, title, album, artist
+                destpath = target + os.sep + artist + os.sep + album + os.sep
+                dest = destpath + num + "_-_" + title + ".mp3"
+                print "    Copying to", dest
+                try:
+                    os.makedirs(destpath)
+                except OSError:
+                    pass
+                shutil.copyfile(song, dest)
